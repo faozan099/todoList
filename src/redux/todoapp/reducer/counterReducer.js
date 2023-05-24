@@ -2,7 +2,7 @@
 import { ADD_TODO, DELETE_ALL, REMOVE_TODO, UPDATE_CHECKBOX, UPDATE_TODO } from "../actions/counterActions";
 
 const initialState = [
-  { id: 1, todo: "", completed: false },
+  { id: 1, todo: "Belajar", completed: false },
 ];
 
 export const operationsReducer = (state = initialState, action) => {
