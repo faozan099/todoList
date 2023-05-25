@@ -1,10 +1,10 @@
 import './App.css'
-import TodoList from './components/inputTodo'
+import Test from './components/inputTodo'
 
 function App() {
   return (
     <div className='body'>
-    <TodoList/>
+    <Test/>
     </div>
   )
 }

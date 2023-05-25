@@ -3,8 +3,7 @@ import { Form } from "./components/Form";
 import { Todos } from "./components/Todos";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteAll } from "./redux/todoapp/actions/counterActions";
-import {Container} from "react-bootstrap";
-
+import { Container } from "react-bootstrap";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,16 +25,16 @@ function App() {
 
   return (
     <Container className="mt-5">
-    <Container className="wrapper" style={{border:"solid black", width:"600px", height:"auto", borderRadius:"40px"}}>
-      <h2 className="text-center my-5">WHAT&apos;S THE PLAN FOR TODAY</h2>
-      <Form editFormVisibility={editFormVisibility} editTodo={editTodo} cancelUpdate={cancelUpdate} />
-      <Todos handleEditClick={handleEditClick} editFormVisibility={editFormVisibility} />
-      {todos.length > 1 && (
-        <button className="btn btn-danger btn-md delete-all mb-3" onClick={() => dispatch(deleteAll())}>
-          DELETE ALL
-        </button>
-      )}
-    </Container>
+      <Container className="wrapper" style={{ border: "solid black", width: "600px", height: "auto", borderRadius: "40px" }}>
+        <h2 className="text-center my-5">WHAT&apos;S THE PLAN FOR TODAY</h2>
+        <Form editFormVisibility={editFormVisibility} editTodo={editTodo} cancelUpdate={cancelUpdate} />
+        <Todos handleEditClick={handleEditClick} editFormVisibility={editFormVisibility} />
+        {todos.length > 1 && (
+          <button className="btn btn-danger btn-md delete-all mb-3" onClick={() => dispatch(deleteAll())}>
+            DELETE ALL
+          </button>
+        )}
+      </Container>
     </Container>
   );
 }

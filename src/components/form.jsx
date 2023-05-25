@@ -40,24 +40,24 @@ export const Form = ({ editFormVisibility, editTodo, cancelUpdate }) => {
   };
 
   return (
-    <Container>
+    <Container className="container-lg">
       {editFormVisibility === false ? (
         <form className="form-group custom-form" onSubmit={handleSubmit}>
-          <Container className="input-and-btn">
+          <div className="input-and-btn">
             <input type="text" className="form-control" required value={todoValue} onChange={(e) => setTodoValue(e.target.value)} />
             <button type="submit" className="btn btn-secondary btn-md">
               ADD
             </button>
-          </Container>
+          </div>
         </form>
       ) : (
         <form className="form-group custom-form" onSubmit={editSubmit}>
-          <Container className="input-and-btn">
+          <div className="input-and-btn">
             <input type="text" className="form-control" placeholder="hallo" required value={editValue || ""} onChange={(e) => setEditValue(e.target.value)} />
             <button type="submit" className="btn btn-secondary btn-md">
               UPDATE
             </button>
-          </Container>
+          </div>
           <button type="button" className="btn btn-primary btn-md back-btn" onClick={cancelUpdate}>
             BACK
           </button>
