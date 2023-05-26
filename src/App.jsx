@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Form } from "./components/Form";
+import { Form } from "./components/form";
 import { Todos } from "./components/Todos";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteAll } from "./redux/todoapp/actions/counterActions";
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <Container className="mt-5">
-      <Container className="wrapper" style={{ border: "solid black", width: "600px", height: "auto", borderRadius: "40px" }}>
+      <Container className="wrapper">
         <h2 className="text-center my-5">WHAT&apos;S THE PLAN FOR TODAY</h2>
         <Form editFormVisibility={editFormVisibility} editTodo={editTodo} cancelUpdate={cancelUpdate} />
         <Todos handleEditClick={handleEditClick} editFormVisibility={editFormVisibility} />

@@ -40,7 +40,7 @@ export const Form = ({ editFormVisibility, editTodo, cancelUpdate }) => {
   };
 
   return (
-    <Container className="container-lg">
+    <Container style={{margin: "auto"}}>
       {editFormVisibility === false ? (
         <form className="form-group custom-form" onSubmit={handleSubmit}>
           <div className="input-and-btn">
