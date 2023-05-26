@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form } from "./components/form";
-import { Todos } from "./components/Todos";
+import { Todos } from "./components/todos";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteAll } from "./redux/todoapp/actions/counterActions";
 import { Container } from "react-bootstrap";
